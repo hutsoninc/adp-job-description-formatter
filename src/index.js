@@ -49,16 +49,6 @@ outputEl.onclick = function() {
     document.execCommand('copy');
 }
 
-// inputEl.addEventListener('keypress', (el, ev) => {
-    
-//     if(el.key.toLowerCase() == 'enter'){
-
-//         run();
-
-//     }
-
-// });
-
 function run() {
 
     let output = [];
