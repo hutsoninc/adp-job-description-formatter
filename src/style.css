@@ -1,0 +1,72 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    width: 50%;
+    min-width: 800px;
+    padding: 50px;
+    height: auto;
+    margin: 25px auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+h3 {
+    font-size: 0.8em;
+}
+
+.requirements {
+    font-size: 0.9em;
+    margin-bottom: 40px;
+}
+
+#submit {
+    display: inline-block;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#characterCount {
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+#outputSection {
+    margin-top: 40px;
+}
+
+textarea {
+    box-sizing: border-box;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    border: 1px solid #bbbbbb;
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    font-size: 0.9em;
+}
+
+ul {
+    font-size: 0.9em;
+}
