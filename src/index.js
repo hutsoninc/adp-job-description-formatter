@@ -3,7 +3,7 @@ const responsibilitiesEl = document.getElementById('responsibilities');
 const experienceEl = document.getElementById('experience');
 const essentialEligibilityEl = document.getElementById('essentialEligibility');
 const jobRequirementsEl = document.getElementById('jobRequirements');
-const workingConditionsEl = document.getElementById('workingConditions');
+
 const submitEl = document.getElementById('submit');
 const characterCountEl = document.getElementById('characterCount');
 const outputEl = document.getElementById('output');
@@ -31,14 +31,10 @@ const sections = [
         el: jobRequirementsEl,
         type: 'list',
         subLists: true
-    },
-    {
-        el: workingConditionsEl,
-        type: 'list'
     }
 ];
 
-submitEl.addEventListener('mousedown', (el, ev) => {
+submitEl.addEventListener('mousedown', () => {
     
     run();
 
