@@ -6,7 +6,10 @@ const essentialEligibilityEl = document.getElementById('essentialEligibility');
 const jobRequirementsEl = document.getElementById('jobRequirements');
 const contactInfoEl = document.getElementById('contactInfo');
 
+const textareaEls = document.querySelectorAll('textarea');
+
 const submitEl = document.getElementById('submit');
+const clearEl = document.getElementById('clear');
 const characterCountEl = document.getElementById('characterCount');
 const outputEl = document.getElementById('output');
 
@@ -36,9 +39,41 @@ const sections = [
     }
 ];
 
+for(let i = 0; i < textareaEls.length; i++){
+
+    textareaEls[i].addEventListener('keyup', () => {
+
+        run();
+
+    });
+
+}
+
 submitEl.addEventListener('mousedown', () => {
     
     run();
+
+});
+
+clearEl.addEventListener('mousedown', () => {
+    
+    clearTextareas();
+
+});
+
+submitEl.addEventListener('keyup', e => {
+    
+    if(e.keyCode === 13){
+        run();
+    }
+
+});
+
+clearEl.addEventListener('keyup', e => {
+    
+    if(e.keyCode === 13){
+        clearTextareas();
+    }
 
 });
 
@@ -138,16 +173,24 @@ function run() {
 
 }
 
+function clearTextareas(){
+    for(let i = 0; i < textareaEls.length; i++){
+        textareaEls[i].value = '';
+    }
+
+    run();
+}
+
 function setCharacterCount(count){
 
     characterCountEl.innerText = `Character count: ${count}/${charLimit}`
     
     if(count > charLimit) {
-        characterCountEl.style.color = 'red';
+        characterCountEl.style.backgroundColor = 'red';
     }else if(count == 0){
-        characterCountEl.style.color = '#000';
+        characterCountEl.style.backgroundColor = '#000';
     }else {
-        characterCountEl.style.color = 'green';
+        characterCountEl.style.backgroundColor = 'green';
     }
 
 }

@@ -7,19 +7,40 @@ body, html {
 }
 
 .main {
-    width: 50%;
-    min-width: 800px;
-    padding: 50px;
+    width: 900px;
+    max-width: 900px;
+    min-width: 900px;
     height: auto;
     margin: 25px auto;
     box-sizing: border-box;
     background-color: #fff;
-    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+header {
+    background-color: #377539;
+    color: #fff;
+    position: relative;
 }
 
 h1 {
+    padding: 50px 50px;
+    margin: 0;
     font-size: 2em;
-    margin-top: 0;
+}
+
+#logo {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+}
+
+.app {
+    width: 900px;
+    max-width: 900px;
+    min-width: 900px;
+    padding: 50px;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -45,11 +66,27 @@ h3 {
     vertical-align: middle;
 }
 
-#characterCount {
+#clear {
     display: inline-block;
-    padding: 0 15px;
-    margin: 0;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    margin-left: 15px;
+    background-color: #e7e7e7;
+    color: #000;
+    cursor: pointer;
     vertical-align: middle;
+}
+
+#characterCount {
+    display: block;
+    padding: 15px;
+    margin: 25px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
 
 #outputSection {

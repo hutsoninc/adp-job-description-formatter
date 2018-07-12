@@ -11,84 +11,94 @@
 <body>
     <section class="main">
 
-        <h1>ADP Job Description Formatter</h1>
+        <header>
+                <h1>ADP Job Description Formatter</h1>
+            <img id="logo" src="static/logo.jpg" alt="" />
+        </header>
 
-        <p class="requirements">
-            Tool used by the Hutson Inc. HR team to format job descriptions for ADP.
-        </p>
+        <section class="app">
+        
+            <p class="requirements">
+                Tool used by the Hutson Inc. HR team to format job descriptions for ADP.
+            </p>
 
-        <h2>Instructions</h2>
-        <ul>
-            <li>Enter the details for each section in the text area underneath appropriate heading.</li>
-            <li>Any text areas left blank will not be included in the output.</li>
-            <li>Once all details are entered, click submit and the formatted code will be displayed in the <a href="#output">Output section</a>.</li>
-            <li>Remove any bullet points and extra spaces in list sections. Leave line breaks to separate each list item.</li>
-        </ul>
+            <h2>Instructions</h2>
+            <ul>
+                <li>Enter the details for each section in the text area underneath appropriate heading.</li>
+                <li>Any text areas left blank will not be included in the output.</li>
+                <li>Once all details are entered, click submit and the formatted code will be displayed in the <a href="#output">Output section</a>.</li>
+                <li>Remove any bullet points and extra spaces in list sections. Leave line breaks to separate each list item.</li>
+            </ul>
 
-        <br /><hr /><br />
+            <br /><hr /><br />
 
-        <div id="disclaimer">
-            <h2>Disclaimer</h2>
-            <textarea tabindex="1"></textarea>
-        </div>
-
-        <div id="purpose">
-            <h2>Purpose</h2>
-            <textarea tabindex="2"></textarea>
-        </div>
-
-        <div id="responsibilities">
-            <h2>Responsibilities</h2>
-            <textarea tabindex="3"></textarea>
-        </div>
-
-        <div id="experience">
-            <h2>Experience, Education, and Skills</h2>
-            <textarea tabindex="4"></textarea>
-        </div>
-
-        <div id="essentialEligibility">
-            <h2>Essential Eligibility Requirements</h2>
-            <textarea tabindex="5"></textarea>
-        </div>
-
-        <div id="jobRequirements">
-            <h2>Essential Job Requirements</h2>
-            <div>
-                <h3>General Physical Requirements</h3>
-                <textarea tabindex="6"></textarea>
+            <div id="disclaimer">
+                <h2>Disclaimer</h2>
+                <textarea tabindex="1"></textarea>
             </div>
-            <div>
-                <h3>Physical Activities</h3>
-                <textarea tabindex="7"></textarea>
+
+            <div id="purpose">
+                <h2>Purpose</h2>
+                <textarea tabindex="2"></textarea>
             </div>
-            <div>
-                <h3>Visual Acuity</h3>
-                <textarea tabindex="8"></textarea>
+
+            <div id="responsibilities">
+                <h2>Responsibilities</h2>
+                <textarea tabindex="3"></textarea>
             </div>
-            <div>
-                <h3>Working Conditions</h3>
-                <textarea tabindex="9"></textarea>
+
+            <div id="experience">
+                <h2>Experience, Education and Skills</h2>
+                <textarea tabindex="4"></textarea>
             </div>
-        </div>
 
-        <div id="contactInfo">
-            <h2>Additional Contact Info</h2>
-            <textarea tabindex="10"></textarea>
-        </div>
+            <div id="essentialEligibility">
+                <h2>Essential Eligibility Requirements</h2>
+                <textarea tabindex="5"></textarea>
+            </div>
 
-        <div id="submitSection">
-            <div id="submit" tabindex="11">Submit</div>
-            <p id="characterCount"></p>
-        </div>
+            <div id="jobRequirements">
+                <h2>Essential Job Requirements</h2>
+                <div>
+                    <h3>General Physical Requirements</h3>
+                    <textarea tabindex="6"></textarea>
+                </div>
+                <div>
+                    <h3>Physical Activities</h3>
+                    <textarea tabindex="7"></textarea>
+                </div>
+                <div>
+                    <h3>Visual Acuity</h3>
+                    <textarea tabindex="8"></textarea>
+                </div>
+                <div>
+                    <h3>Working Conditions</h3>
+                    <textarea tabindex="9"></textarea>
+                </div>
+            </div>
 
-        <div id="outputSection">
-            <h2>Output</h2>
-            <textarea id="output" tabindex="12"></textarea>
-        </div>
+            <div id="contactInfo">
+                <h2>Additional Contact Info</h2>
+                <textarea tabindex="10"></textarea>
+            </div>
 
+            <div id="submitSection">
+                <div id="submit" tabindex="11">Submit</div>
+                <div id="clear" tabindex="12">Clear</div>
+            </div>
+
+            <div id="outputSection">
+                <h2>Output</h2>
+                <textarea id="output" tabindex="13"></textarea>
+            </div>
+
+            
+        </section>
+        
     </section>
-
+    
+    <p id="characterCount">Character count: 0</p>
+    
     <script src="index.js"></script>
 </body>
 </html>
