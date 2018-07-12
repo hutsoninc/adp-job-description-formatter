@@ -15,7 +15,6 @@ dist
 dist-*
 .next
 json
-static
 dev
 docs/build/
 coverage/
