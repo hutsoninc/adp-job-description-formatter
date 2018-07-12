@@ -1,8 +1,10 @@
+const disclaimerEl = document.getElementById('disclaimer');
 const purposeEl = document.getElementById('purpose');
 const responsibilitiesEl = document.getElementById('responsibilities');
 const experienceEl = document.getElementById('experience');
 const essentialEligibilityEl = document.getElementById('essentialEligibility');
 const jobRequirementsEl = document.getElementById('jobRequirements');
+const contactInfoEl = document.getElementById('contactInfo');
 
 const submitEl = document.getElementById('submit');
 const characterCountEl = document.getElementById('characterCount');
@@ -48,6 +50,15 @@ outputEl.onclick = function() {
 function run() {
 
     let output = [];
+    let contactTextarea;
+    let disclaimerTextArea
+
+    // Get contact info
+    disclaimerTextArea = disclaimerEl.getElementsByTagName('textarea')[0];
+
+    if(disclaimerTextArea.value.trim().length) {
+        output.push(`<p><b>${disclaimerTextArea.value.trim()}</b></p>`);
+    }
 
     for(let i = 0; i < sections.length; i++) {
 
@@ -110,6 +121,13 @@ function run() {
 
         }
     
+    }
+
+    // Get contact info
+    contactTextarea = contactInfoEl.getElementsByTagName('textarea')[0];
+
+    if(contactTextarea.value.trim().length) {
+        output.push(`<p>${contactTextarea.value.trim()}</p>`);
     }
 
     output = output.join('');
