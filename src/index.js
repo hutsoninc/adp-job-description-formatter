@@ -6,6 +6,8 @@ const essentialEligibilityEl = document.getElementById('essentialEligibility');
 const jobRequirementsEl = document.getElementById('jobRequirements');
 const contactInfoEl = document.getElementById('contactInfo');
 
+const contactInputEl = contactInfoEl.getElementsByTagName('input')[0];
+
 const textareaEls = document.querySelectorAll('textarea');
 
 const submitEl = document.getElementById('submit');
@@ -85,8 +87,7 @@ outputEl.onclick = function() {
 function run() {
 
     let output = [];
-    let contactTextarea;
-    let disclaimerTextArea
+    let disclaimerTextArea;
 
     // Get contact info
     disclaimerTextArea = disclaimerEl.getElementsByTagName('textarea')[0];
@@ -159,13 +160,13 @@ function run() {
     }
 
     // Get contact info
-    contactTextarea = contactInfoEl.getElementsByTagName('textarea')[0];
-
-    if(contactTextarea.value.trim().length) {
-        output.push(`<p>${contactTextarea.value.trim()}</p>`);
+    if(contactInputEl.value.trim().length) {
+        output.push(`<p>${contactInputEl.value}</p>`);
     }
 
     output = output.join('');
+
+    output = output.replace(/•\t/g, '');
 
     outputEl.value = output;
     
@@ -194,3 +195,5 @@ function setCharacterCount(count){
     }
 
 }
+
+run();

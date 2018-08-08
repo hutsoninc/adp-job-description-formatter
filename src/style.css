@@ -93,6 +93,16 @@ h3 {
     margin-top: 40px;
 }
 
+input {
+    box-sizing: border-box;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    border: 1px solid #bbbbbb;
+    width: 100%;
+    height: auto;
+    font-size: 0.9em;
+}
+
 textarea {
     box-sizing: border-box;
     margin: 0 0 20px;
