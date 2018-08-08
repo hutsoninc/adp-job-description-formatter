@@ -56,7 +56,7 @@ h3 {
     margin-bottom: 40px;
 }
 
-#submit {
+#submit, #disclaimerSignOn {
     display: inline-block;
     font-size: 0.9em;
     padding: 10px 20px;

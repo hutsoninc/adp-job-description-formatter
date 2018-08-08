@@ -1,11 +1,12 @@
 const disclaimerEl = document.getElementById('disclaimer');
+const disclaimerTextareaEl = disclaimerEl.getElementsByTagName('textarea')[0];
+const disclaimerSignOnEl = document.getElementById('disclaimerSignOn');
 const purposeEl = document.getElementById('purpose');
 const responsibilitiesEl = document.getElementById('responsibilities');
 const experienceEl = document.getElementById('experience');
 const essentialEligibilityEl = document.getElementById('essentialEligibility');
 const jobRequirementsEl = document.getElementById('jobRequirements');
 const contactInfoEl = document.getElementById('contactInfo');
-
 const contactInputEl = contactInfoEl.getElementsByTagName('input')[0];
 
 const textareaEls = document.querySelectorAll('textarea');
@@ -41,42 +42,45 @@ const sections = [
     }
 ];
 
+// Apply event listeners
 for(let i = 0; i < textareaEls.length; i++){
-
     textareaEls[i].addEventListener('keyup', () => {
-
         run();
-
     });
-
 }
 
 submitEl.addEventListener('mousedown', () => {
-    
     run();
-
 });
 
 clearEl.addEventListener('mousedown', () => {
-    
     clearTextareas();
-
 });
 
 submitEl.addEventListener('keyup', e => {
-    
     if(e.keyCode === 13){
         run();
     }
-
 });
 
 clearEl.addEventListener('keyup', e => {
-    
     if(e.keyCode === 13){
         clearTextareas();
     }
+});
 
+disclaimerSignOnEl.addEventListener('mousedown', e => {
+    e.preventDefault();
+    applyDisclaimer();
+    run();
+});
+
+disclaimerSignOnEl.addEventListener('keyup', e => {
+    e.preventDefault();
+    if(e.keyCode === 13){
+        applyDisclaimer();
+        run();
+    }
 });
 
 outputEl.onclick = function() {
@@ -84,16 +88,13 @@ outputEl.onclick = function() {
     document.execCommand('copy');
 }
 
+// Submit function
 function run() {
 
     let output = [];
-    let disclaimerTextArea;
 
-    // Get contact info
-    disclaimerTextArea = disclaimerEl.getElementsByTagName('textarea')[0];
-
-    if(disclaimerTextArea.value.trim().length) {
-        output.push(`<p><b>${disclaimerTextArea.value.trim()}</b></p>`);
+    if(disclaimerTextareaEl.value.trim().length) {
+        output.push(`<p><b>${disclaimerTextareaEl.value.trim()}</b></p>`);
     }
 
     for(let i = 0; i < sections.length; i++) {
@@ -174,7 +175,12 @@ function run() {
 
 }
 
-function clearTextareas(){
+function applyDisclaimer() {
+    disclaimerTextareaEl.innerText = '***Up to $X,XXX sign-on bonus available***';
+    disclaimerTextareaEl.focus();
+}
+
+function clearTextareas() {
     for(let i = 0; i < textareaEls.length; i++){
         textareaEls[i].value = '';
     }
@@ -182,7 +188,7 @@ function clearTextareas(){
     run();
 }
 
-function setCharacterCount(count){
+function setCharacterCount(count) {
 
     characterCountEl.innerText = `Character count: ${count}/${charLimit}`
     
