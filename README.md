@@ -2,12 +2,8 @@
 
 https://adp-job-description-formatter.netlify.com/
 
-Used for formatting ADP job descriptions.
-
-## Authors
-
-* **Austin Gordon** - *Development* - [GitHub](https://github.com/AustinLeeGordon)
+Internal tool used for formatting ADP job descriptions.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+MIT © [Hutson Inc](https://www.hutsoninc.com)

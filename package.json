@@ -1,7 +1,7 @@
 {
   "name": "adp-job-description-formatter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Internal tool used for formatting ADP job descriptions.",
   "main": "index.js",
   "scripts": {
     "build": "parcel build src/index.html -d dist/",
@@ -17,16 +17,16 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "parcel-bundler": "^1.8.1"
+    "parcel-bundler": "^1.11.0"
   },
   "author": {
     "name": "Austin Gordon",
-    "email": "agordon@hutsoninc.com",
-    "url": "https://github.com/AustinLeeGordon"
+    "email": "gordon.austin2@gmail.com",
+    "url": "https://www.austinleegordon.com/"
   },
   "repository": {
-    "url": "https://github.com/hutsoninc/adp-job-description-formatter.git",
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/hutsoninc/adp-job-description-formatter.git"
   },
   "license": "MIT"
 }
